@@ -25,16 +25,13 @@ final class VehicleViewModel : ObservableObject {
 
     func vehicleStatusPressed() {
         navStackVehicleRouter.showVehicleStatus(true)
-        objectWillChange.send()
     }
     
     @MainActor
     func vehicleStatusTyrePressurePressed() async {
         navStackVehicleRouter.showVehicleStatus(true)
-        objectWillChange.send()
         await Task.sleep(.milliseconds(600))
         navStackVehicleRouter.tyrePressure = true
-        objectWillChange.send()
     }
 }
 

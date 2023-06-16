@@ -29,7 +29,6 @@ final class VehicleStatusTabViewModel : ObservableObject {
     
     func tyrePressurePressed() {
         navStackVehicleRouter.tyrePressureAnimate(show: true)
-        objectWillChange.send()
     }
 }
 
